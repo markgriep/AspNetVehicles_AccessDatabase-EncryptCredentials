@@ -16,6 +16,14 @@ namespace VehicleFinder.Controllers
         }
 
 
+        public ActionResult Make(string make, int year)
+        {
+            return Content($"This is the 'Make' action. You passed two parameters, {make} and {year}.");
+        }
+
+
+
+
         public ActionResult Special()
         {
             var car = new Vehicle()

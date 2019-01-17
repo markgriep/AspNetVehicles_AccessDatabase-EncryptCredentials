@@ -13,11 +13,24 @@ namespace VehicleFinder
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // Custom routes
+            // http://localhost:54871/vehicle/make/toyota/2010
+            // Custom routes need to be before the default. Order matters. Order them most specific to most generic
+
+            routes.MapRoute(
+                "fooName",
+                "vehicle/make/{make}/{year}",
+                defaults: new { Controller = "Vehicle", Action = "make" }); 
+            
+            
+
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
 
             // Here are the routing rules 
             // Follows this pattern NameOfController, ActionName, ID to pass to the action
