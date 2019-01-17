@@ -1,0 +1,8 @@
+﻿
+
+Next we have controllers and you can see our default project
+template has three controllers account which has actions for
+sign up log in log out home which represents the home page and 
+manage which provides a number of actions for handling requests
+around users profile like changing passport enabling two factor
+
