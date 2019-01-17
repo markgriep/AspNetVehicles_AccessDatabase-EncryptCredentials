@@ -35,6 +35,21 @@ namespace VehicleFinder.Controllers
         }
 
 
+        //  Demo handling multiple parameters
+        //  /vehicle/default?pageIndex=132&sortBy=OtherDate
+        public ActionResult Default(int? pageIndex, string sortBy)
+        {
+            if (!pageIndex.HasValue)
+            {
+                pageIndex = 1;
+            }
+
+            if (String.IsNullOrEmpty(sortBy))
+            {
+                sortBy = "Name";
+            }
+            return Content(String.Format($"pageIndex={pageIndex}&sortBy={sortBy}"));
+        }
 
 
 
