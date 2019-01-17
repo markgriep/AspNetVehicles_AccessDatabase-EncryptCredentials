@@ -27,6 +27,50 @@ namespace VehicleFinder.Controllers
             return View(car);
         }
 
+        
+
+        // Demonstrate some other things you can return from these actions.
+        
+        public ContentResult Content()
+        {
+            return Content("this is some content");                     // return text to the browser  
+        }
+
+
+
+        public EmptyResult Empty()
+        {
+            return new EmptyResult();                                   // will return blank to the browser
+        }
+
+
+
+        public ActionResult Google()
+        {
+            return new RedirectResult(@"https://www.google.com");       // redirect to google
+        }
+
+
+        public FileResult File()
+        {
+            return File(@"c:\windows\win.ini","text/HTML");             // will return the text from this file 
+        }
+
+
+        public HttpNotFoundResult NotFound()
+        {
+            return HttpNotFound();                                      // return 404 error
+        }
+        
+
+
+        public ActionResult ToAction()
+        {
+            return RedirectToAction("About", "Home", new { pg = 1, x = "s"});     // will go to another page
+        }
+
+
+      
 
     }
 }
