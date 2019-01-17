@@ -28,6 +28,18 @@ namespace VehicleFinder.Controllers
         }
 
         
+        // Demonstrate Action Parameters (how parameters get to the code)
+        public ActionResult Edit(int id)
+        {
+            return Content($"id={id}");      //   /vehicle/edit/1   OR  /vehicle/edit?id=1
+        }
+
+
+
+
+
+
+
 
         // Demonstrate some other things you can return from these actions.
         
