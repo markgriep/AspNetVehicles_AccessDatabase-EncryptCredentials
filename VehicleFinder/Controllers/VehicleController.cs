@@ -16,6 +16,8 @@ namespace VehicleFinder.Controllers
         }
 
 
+        [Route("vehicle/{make}/{year:regex(\\d{4})}")]
+        [Route("foo/foo/foo/{make}/{year}")]
         public ActionResult Make(string make, int year)
         {
             return Content($"This is the 'Make' action. You passed two parameters, {make} and {year}.");

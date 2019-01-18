@@ -13,20 +13,25 @@ namespace VehicleFinder
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            // Custom routes
-            // http://localhost:54871/vehicle/make/toyota/2010
-            // Custom routes need to be before the default. Order matters. Order them most specific to most generic
 
-            routes.MapRoute(
-                "fooName",
-                "vehicle/make/{make}/{year}",
-                defaults: new { Controller = "Vehicle", Action = "make" },
-                new { make = @"Toyota|Honda", year = @"\d{4}"}
-                );
-            // Route constraints. Uses Regex 
-            // Note: be careful of the \d make sure it's a backslash
-            // needed to change the language version to allow these
-            //       Project->Properties->Build->Advanced->Language Version->C# latest Minor Version
+            routes.MapMvcAttributeRoutes();
+
+
+            // Commented out everything below to use routing attributes in the controller
+            //// Custom routes
+            //// http://localhost:54871/vehicle/make/toyota/2010
+            //// Custom routes need to be before the default. Order matters. Order them most specific to most generic
+
+            //routes.MapRoute(
+            //    "fooName",
+            //    "vehicle/make/{make}/{year}",
+            //    defaults: new { Controller = "Vehicle", Action = "make" },
+            //    new { make = @"Toyota|Honda", year = @"\d{4}"}
+            //    );
+            //// Route constraints. Uses Regex 
+            //// Note: be careful of the \d make sure it's a backslash
+            //// needed to change the language version to allow these
+            ////       Project->Properties->Build->Advanced->Language Version->C# latest Minor Version
 
 
 
