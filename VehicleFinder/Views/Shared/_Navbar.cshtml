@@ -1,0 +1,26 @@
+﻿@*
+To get a new partial view, Right click Add New View select MVC 5 then add, then make sure the Partial checkbox is selected.	
+*@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-light">
+	<a class="navbar-brand" href="#">VehicleFinder</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarColor03">
+		<ul class="navbar-nav mr-auto">
+			@*Hard coded links*@
+			<li class="nav-item active"><a class="nav-link" href="/home/index">Home <span class="sr-only">(current)</span></a></li>
+			<li class="nav-item"><a class="nav-link" href="/vehicle/">Vehicle</a></li>
+			<li class="nav-item"><a class="nav-link" href="/vehicle/special">Today's Special</a></li>
+			<li class="nav-item"><a class="nav-link" href="/home/about">About</a></li>
+
+			@*
+			Below is another way to create a link.  Null parameter is needed so it doesn't pass a value
+			@Html.ActionLink(“View	Movies”,“Index”,“Movies”,new{id=1}) will generate this: /movies/index/1
+			*@
+			<li class="nav-item">@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "nav-link" })</li>
+		</ul>
+	</div>
+</nav>

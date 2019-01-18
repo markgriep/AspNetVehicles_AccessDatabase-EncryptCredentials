@@ -252,6 +252,8 @@
     <Content Include="Views\Vehicle\Special.cshtml" />
     <Content Include="Views\Vehicle\simpleviewdata.cshtml" />
     <Content Include="Views\Vehicle\ViewModel.cshtml" />
+    <Content Include="Views\Shared\_Navbar.cshtml" />
+    <Content Include="Views\Vehicle\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
