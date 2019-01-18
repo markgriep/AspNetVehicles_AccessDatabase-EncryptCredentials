@@ -16,8 +16,15 @@ namespace VehicleFinder.Controllers
         }
 
 
-        [Route("vehicle/{make}/{year:regex(\\d{4})}")]
-        [Route("foo/foo/foo/{make}/{year}")]
+
+
+        //https://docs.microsoft.com/en-us/aspnet/web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2
+
+
+        [Route("cars/{year:min(1922)}")]                                                      // http://localhost:54871/cars/9 not work!  http://localhost:54871/cars/9999 will work!
+        //[Route("vehicle/{make:minlength(5)}/{year:regex(\\d{4})}")]                         // http://localhost:54871/vehicle/chev/2019  Not work! chev is 4 char http://localhost:54871/vehicle/honda/2019 works!
+        //[Route("vehicle/{make}/{year:regex(\\d{4})}")]                                      // http://localhost:54871/vehicle/honda/2019
+        //[Route("foo/foo/foo/{make}/{year}")]                                                // http://localhost:54871/foo/foo/foo/toy/1231
         public ActionResult Make(string make, int year)
         {
             return Content($"This is the 'Make' action. You passed two parameters, {make} and {year}.");
