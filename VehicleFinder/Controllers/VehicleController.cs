@@ -9,29 +9,14 @@ namespace VehicleFinder.Controllers
 {
     public class VehicleController : Controller
     {
-        // GET: Vehicle
+        
+
         public ActionResult Index()
         {
             return View();
         }
 
-
-
-
-        //https://docs.microsoft.com/en-us/aspnet/web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2
-
-
-        [Route("cars/{year:min(1922)}")]                                                      // http://localhost:54871/cars/9 not work!  http://localhost:54871/cars/9999 will work!
-        //[Route("vehicle/{make:minlength(5)}/{year:regex(\\d{4})}")]                         // http://localhost:54871/vehicle/chev/2019  Not work! chev is 4 char http://localhost:54871/vehicle/honda/2019 works!
-        //[Route("vehicle/{make}/{year:regex(\\d{4})}")]                                      // http://localhost:54871/vehicle/honda/2019
-        //[Route("foo/foo/foo/{make}/{year}")]                                                // http://localhost:54871/foo/foo/foo/toy/1231
-        public ActionResult Make(string make, int year)
-        {
-            return Content($"This is the 'Make' action. You passed two parameters, {make} and {year}.");
-        }
-
-
-
+        
 
         public ActionResult Special()
         {
@@ -44,6 +29,26 @@ namespace VehicleFinder.Controllers
             return View(car);
         }
 
+
+
+        #region Demonstrate attribute routing
+
+        //https://docs.microsoft.com/en-us/aspnet/web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2
+
+        [Route("cars/{year:min(1922)}")]                                                      // http://localhost:54871/cars/9 not work!  http://localhost:54871/cars/9999 will work!
+        //[Route("vehicle/{make:minlength(5)}/{year:regex(\\d{4})}")]                         // http://localhost:54871/vehicle/chev/2019  Not work! chev is 4 char http://localhost:54871/vehicle/honda/2019 works!
+        //[Route("vehicle/{make}/{year:regex(\\d{4})}")]                                      // http://localhost:54871/vehicle/honda/2019
+        //[Route("foo/foo/foo/{make}/{year}")]                                                // http://localhost:54871/foo/foo/foo/toy/1231
+        public ActionResult Make(string make, int year)
+        {
+            return Content($"This is the 'Make' action. You passed two parameters, {make} and {year}.");
+        }
+        
+        #endregion
+
+
+
+        #region Demonstrate hanlding parameters
         
         // Demonstrate Action Parameters (how parameters get to the code)
         public ActionResult Edit(int id)
@@ -68,13 +73,14 @@ namespace VehicleFinder.Controllers
             return Content(String.Format($"pageIndex={pageIndex}&sortBy={sortBy}"));
         }
 
+        #endregion
 
 
 
-
-
-        // Demonstrate some other things you can return from these actions.
+        #region Demonstrate returning other things to the browser
         
+        // Demonstrate some other things you can return from these actions.
+
         public ContentResult Content()
         {
             return Content("this is some content");                     // return text to the browser  
@@ -113,7 +119,7 @@ namespace VehicleFinder.Controllers
             return RedirectToAction("About", "Home", new { pg = 1, x = "s"});     // will go to another page
         }
 
-
+        #endregion
       
 
     }
