@@ -27,7 +27,7 @@ namespace VehicleFinder.Controllers
                 VehicleYear = 2006
             };
 
-            ViewData["Vehicle"] = car;
+            ViewData["Vehicle"] = car;   // passing the vehicle object to the view
 
             return View();
         }
