@@ -26,8 +26,27 @@ namespace VehicleFinder.Controllers
                 VehicleModel = "Sienna",
                 VehicleYear = 2006
             };
-            return View(car);
+
+            ViewData["Vehicle"] = car;
+
+            return View();
         }
+
+
+
+
+        // Simple ViewData handler
+        public ActionResult SimpleViewData()
+        {
+            ViewData["Name"] = "Bob";
+            return View();
+        }
+
+
+
+
+
+
 
 
 
