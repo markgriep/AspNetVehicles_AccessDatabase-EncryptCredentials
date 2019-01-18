@@ -14,7 +14,7 @@ namespace VehicleFinder
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
 
-            routes.MapMvcAttributeRoutes();
+            routes.MapMvcAttributeRoutes();             // need this to enable attribute routing.
 
 
             // Commented out everything below to use routing attributes in the controller
