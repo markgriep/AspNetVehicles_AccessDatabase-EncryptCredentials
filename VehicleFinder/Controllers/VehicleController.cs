@@ -27,7 +27,7 @@ namespace VehicleFinder.Controllers
                 VehicleYear = 2006
             };
 
-            ViewData["Vehicle"] = car;   // passing the vehicle object to the view
+            ViewBag.Foo = car;                  // Viewbag. Not the preferred way, but you can pass objects with it.
 
             return View();
         }

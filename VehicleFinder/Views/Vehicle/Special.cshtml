@@ -1,6 +1,4 @@
 ﻿
-@using VehicleFinder.Models  
-@model  VehicleFinder.Models.Vehicle
 
 
 @{
@@ -8,8 +6,11 @@
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@*Notice the explicit cast to a Vehicle *@
-<h2>@(((Vehicle)ViewData["Vehicle"]).VehicleMake)</h2>
 
-@*Notice the fully qualified name.  Don't really need to use that if you have the above Using statement *@
-<h2>@(((VehicleFinder.Models.Vehicle)ViewData["Vehicle"]).VehicleModel)</h2>
+
+@*This works but it is not the preferred way since it uses magic properties*@
+
+<h1>@ViewBag.Foo.VehicleMake</h1>
+<h1>@ViewBag.Foo.VehicleModel</h1>
+<h1>@ViewBag.Foo.VehicleYear</h1>
+
