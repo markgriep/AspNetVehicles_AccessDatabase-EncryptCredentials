@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using VehicleFinder.Models;
+using VehicleFinder.ViewModels;
 
 namespace VehicleFinder.Controllers
 {
@@ -16,7 +17,40 @@ namespace VehicleFinder.Controllers
             return View();
         }
 
-        
+
+
+
+
+
+
+
+
+        public ActionResult ViewModel()
+        {
+            var car = new Vehicle()                             // mock up a vehicle
+            {
+                VehicleId = 1001,
+                VehicleMake = "Toyota",
+                VehicleModel = "Sienna",
+                VehicleYear = 2006
+            };
+            var CustomerList = new List<Customer>()             // mock up a customer list
+            {
+                new Customer{Id =1 , Name = "Jane"},
+                new Customer{Id =2 , Name = "Joe"}
+
+            };
+              
+            var fooModel = new SpecialVehicleViewModel()        // Populate the viewmodel
+            {
+                Vehicle = car, Customers = CustomerList
+            };
+
+
+            return View(fooModel);
+        }
+
+    
 
         public ActionResult Special()
         {

@@ -1,0 +1,21 @@
+﻿@model VehicleFinder.ViewModels.SpecialVehicleViewModel
+@{
+    ViewBag.Title = "ViewModel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<h2>Vehicle: @Model.Vehicle.VehicleMake  @Model.Vehicle.VehicleModel, @Model.Vehicle.VehicleYear</h2>
+
+
+
+@foreach (var x in  Model.Customers)
+{
+    
+<h3>Owner: @x.Name</h3>
+
+}
+
+
