@@ -1,21 +1,48 @@
 ﻿@model VehicleFinder.ViewModels.SpecialVehicleViewModel
 @{
-    ViewBag.Title = "ViewModel";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "ViewModel";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 
 
 
-<h2>Vehicle: @Model.Vehicle.VehicleMake  @Model.Vehicle.VehicleModel, @Model.Vehicle.VehicleYear</h2>
 
 
-
-@foreach (var x in  Model.Customers)
+@if (Model.Vehicle.VehicleYear < 2000)
 {
-    
-<h3>Owner: @x.Name</h3>
+		<div class="card text-white bg-danger mb-lg-auto" style="max-width: 80%; margin-top: 40px">
+
+			<div class="card-header">
+				<h2>
+					Warning, model year is: @Model.Vehicle.VehicleYear
+				</h2> 
+			</div>
+
+			<div class="card-body">
+				<h3>
+				@Model.Vehicle.VehicleMake @Model.Vehicle.VehicleModel, @Model.Vehicle.VehicleYear
+				</h3> 
+				<h3 class="card-title">Owners:</h3>
+				@foreach (var x in  Model.Customers)
+				{
+					<h4>@x.Name</h4>
+				}
+			</div>
+
+		</div>
+  
+
 
 }
+else
+{
+		
+	<h2>Vehicle: @Model.Vehicle.VehicleMake  @Model.Vehicle.VehicleModel, @Model.Vehicle.VehicleYear</h2>
+	foreach (var x in  Model.Customers)
+	{
+		<h3>Owner: @x.Name</h3>
+	}
 
+}
 
