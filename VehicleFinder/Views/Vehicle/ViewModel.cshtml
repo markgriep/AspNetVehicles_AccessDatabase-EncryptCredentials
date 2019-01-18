@@ -7,8 +7,6 @@
 
 
 
-
-
 @if (Model.Vehicle.VehicleYear < 2000)
 {
 		<div class="card text-white bg-danger mb-lg-auto" style="max-width: 80%; margin-top: 40px">
@@ -46,3 +44,9 @@ else
 
 }
 
+@*Demonstrate how to dynamically alter class *@
+@{
+	var className = Model.Customers.Count > 1 ? "badge badge-warning" : "badge badge-primary";
+}
+
+<span class="@className">Number of Owners: @Model.Customers.Count</span>
