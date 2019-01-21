@@ -20,6 +20,15 @@ namespace VehicleFinder.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+
+		// represents the vehicle table in the database.
+		// DbContext is aware of the vehicle class with this line in here
+		// must run/re-run  add-migration so the db will be updated.
+
+	    public DbSet<Vehicle> Vehicles { get; set; }   
+
+
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
