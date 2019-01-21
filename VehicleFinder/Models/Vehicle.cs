@@ -12,6 +12,7 @@ namespace VehicleFinder.Models
         public string VehicleMake { get; set; }
         public string VehicleModel { get; set; }
         public int VehicleYear { get; set; }
+		public string ImageUrl { get; set; }
     }
 }
 
