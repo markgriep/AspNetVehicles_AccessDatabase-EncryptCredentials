@@ -13,11 +13,12 @@ namespace VehicleFinder.Controllers
         public ActionResult Index()
         {
             return View(GetVehicles());
-        }
+			//  return View(new List<Vehicle>());   // Switch with this commented out for rudimentary test wtih zero cars
+		}
 
 
 
-	    public ActionResult Details(int id)
+		public ActionResult Details(int id)
 	    {
 			// You MUST use the name "id" for the parameter. The route is configured to use that name.
 		    
