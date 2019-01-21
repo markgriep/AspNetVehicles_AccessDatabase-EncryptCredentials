@@ -190,6 +190,14 @@
     <Compile Include="Migrations\201901212116003_AddedCustomers.Designer.cs">
       <DependentUpon>201901212116003_AddedCustomers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901212137502_PopulateVehiclesWithMockData.cs" />
+    <Compile Include="Migrations\201901212137502_PopulateVehiclesWithMockData.Designer.cs">
+      <DependentUpon>201901212137502_PopulateVehiclesWithMockData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901212210137_PopulateVehiclesWithMoreMockData.cs" />
+    <Compile Include="Migrations\201901212210137_PopulateVehiclesWithMoreMockData.Designer.cs">
+      <DependentUpon>201901212210137_PopulateVehiclesWithMoreMockData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -289,6 +297,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901212116003_AddedCustomers.resx">
       <DependentUpon>201901212116003_AddedCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901212137502_PopulateVehiclesWithMockData.resx">
+      <DependentUpon>201901212137502_PopulateVehiclesWithMockData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901212210137_PopulateVehiclesWithMoreMockData.resx">
+      <DependentUpon>201901212210137_PopulateVehiclesWithMoreMockData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
