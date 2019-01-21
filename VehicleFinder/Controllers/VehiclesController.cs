@@ -9,10 +9,25 @@ namespace VehicleFinder.Controllers
 {
     public class VehiclesController : Controller
     {
-        // GET: Vehicles
-        public ActionResult Index()
+		private ApplicationDbContext _context;   // need a db context to access the db
+
+	    public VehiclesController()
+	    {
+			_context = new ApplicationDbContext();
+	    }
+
+		protected override void Dispose(bool disposing)     // for now do it this way
+		{
+			_context.Dispose();
+		}
+
+
+
+		// GET: Vehicles
+		public ActionResult Index()
         {
-            return View(GetVehicles());
+            //return View(GetVehicles());
+            return View(GetDbVehicles());
 			//  return View(new List<Vehicle>());   // Switch with this commented out for rudimentary test wtih zero cars
 		}
 
@@ -25,10 +40,17 @@ namespace VehicleFinder.Controllers
 			//var ff = GetVehicles().SingleOrDefault(n => n.VehicleId == id);
 		    //return Content($"The 'DETAILS' action. You passed: {id} 0 model ={ff.VehicleModel}");
 
-		    return View(GetVehicles().SingleOrDefault(n => n.VehicleId == id));
+		    //return View(GetVehicles().SingleOrDefault(n => n.VehicleId == id));
+		    return View(GetDbVehicles().SingleOrDefault(n => n.VehicleId == id));
 	    }
 
 
+
+		private List<Vehicle> GetDbVehicles()
+		{
+			var vehicles = _context.Vehicles.ToList();
+			return vehicles;
+		}
 
 
 
