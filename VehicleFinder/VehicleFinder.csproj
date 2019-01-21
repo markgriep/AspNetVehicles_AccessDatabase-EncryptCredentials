@@ -186,6 +186,10 @@
     <Compile Include="Migrations\201901212029578_initalDatabase_CodeFirst_Model.Designer.cs">
       <DependentUpon>201901212029578_initalDatabase_CodeFirst_Model.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901212116003_AddedCustomers.cs" />
+    <Compile Include="Migrations\201901212116003_AddedCustomers.Designer.cs">
+      <DependentUpon>201901212116003_AddedCustomers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -282,6 +286,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201901212029578_initalDatabase_CodeFirst_Model.resx">
       <DependentUpon>201901212029578_initalDatabase_CodeFirst_Model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901212116003_AddedCustomers.resx">
+      <DependentUpon>201901212116003_AddedCustomers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

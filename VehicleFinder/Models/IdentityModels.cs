@@ -31,7 +31,8 @@ namespace VehicleFinder.Models
 
 
 	    public DbSet<Vehicle> Vehicles { get; set; }   
-
+	    public DbSet<Customer> Customers { get; set; }   
+		
 
 
 		// Change the name of the Dabase here. Currently "VehicleFinder"
