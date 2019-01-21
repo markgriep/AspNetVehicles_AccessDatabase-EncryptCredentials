@@ -36,10 +36,8 @@ else
 		{
 			<tbody>
 				<tr class="table-dark">
-					<th scope="row">@x.VehicleMake</th>
-
-
-					<td>@Html.ActionLink(@x.VehicleModel, "Details", new { id = x.VehicleId })</td>
+					<th contenteditable="true">@x.VehicleMake</th>  @* can edit this text, but Doesn't save back...yet*@
+					<td >@Html.ActionLink(@x.VehicleModel, "Details", new { id = x.VehicleId })</td>
 					<td>@x.VehicleYear</td>
 					<td><img src="@x.ImageUrl" alt="@x.VehicleModel image" height="100"></td>
 				</tr>
