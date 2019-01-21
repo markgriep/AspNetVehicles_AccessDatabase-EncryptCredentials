@@ -17,9 +17,24 @@ namespace VehicleFinder.Controllers
 
 
 
+	    public ActionResult Details(int id)
+	    {
+			// You MUST use the name "id" for the parameter. The route is configured to use that name.
+		    
+			//var ff = GetVehicles().SingleOrDefault(n => n.VehicleId == id);
+		    //return Content($"The 'DETAILS' action. You passed: {id} 0 model ={ff.VehicleModel}");
+
+		    return View(GetVehicles().SingleOrDefault(n => n.VehicleId == id));
+	    }
 
 
-        private List<Vehicle> GetVehicles()
+
+
+
+
+
+
+		private List<Vehicle> GetVehicles()
         {
             return new List<Vehicle>()
             {
