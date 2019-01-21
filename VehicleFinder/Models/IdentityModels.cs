@@ -23,14 +23,19 @@ namespace VehicleFinder.Models
 
 		// represents the vehicle table in the database.
 		// DbContext is aware of the vehicle class with this line in here
-		// must run/re-run  add-migration so the db will be updated.
+		// must run/re-run  add-migration so the db will be updated if you add more 
+		// tables.
+		// Then run update-database.  
+		// It appears that you can run that as many times as you want.
+		// For example, you can drop the table and re run and it will recreate it.
+
 
 	    public DbSet<Vehicle> Vehicles { get; set; }   
 
 
 
-        public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+		// Change the name of the Dabase here. Currently "VehicleFinder"
+        public ApplicationDbContext() : base("VehicleFinder", throwIfV1Schema: false)
         {
         }
 
