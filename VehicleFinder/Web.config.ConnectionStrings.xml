@@ -1,0 +1,44 @@
+﻿
+
+	<connectionStrings>
+		<add name="TestDbContext" connectionString="data source=.\SQLEXPRESS; initial catalog=VehicleDemo; integrated security=SSPI" providerName ="System.Data.SqlClient"/>
+	</connectionStrings>
+
+
+
+
+<connectionStrings>
+	<add name="TestDbContext" connectionString="data source=.\SQLEXPRESS; initial catalog=VehicleDemo; Uid=saa; Pwd=Gymreadinterval1482/>
+</connectionStrings>
+
+
+
+
+Provider=SQLNCLI11;Server=myServerAddress;Database=myDataBase;Uid=myUsername; Pwd=myPassword;
+
+
+
+
+connectionStrings>
+<add name="TestDbContext" connectionString="data source=.\SQLEXPRESS; initial catalog=TestDemo; integrated security=SSPI" providerName ="System.Data.SqlClient"/>
+</connectionStrings>
+
+
+
+
+
+Provider=SQLNCLI11;Server=myServerAddress;Database=myDataBase;Uid=saa; Pwd=Hair dealer pan 0982;
+
+Server=.\SQLEXPRESS;Database=VehicleDemo;User Id=myUsername; Password=myPassword;
+
+
+
+
+<connectionStrings>
+	<add name="TestDbContext" connectionString="data source=.\SQLEXPRESS; initial catalog=ZZZVehicleDemo; Uid=ZZZsaa; Pwd=ZZZGymreadinterval1482"/>
+
+	<!--
+		<add name="TestDbContext" connectionString="data source=.\SQLEXPRESS; initial catalog=VehicleDemo; integrated security=SSPI" providerName ="System.Data.SqlClient"/>
+		-->
+</connectionStrings>
+
