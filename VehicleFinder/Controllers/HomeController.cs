@@ -15,14 +15,14 @@ namespace VehicleFinder.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "More information about VehicleFinder.com.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Here's how you can get a hold of us.";
 
             return View();
         }
