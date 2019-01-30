@@ -239,7 +239,7 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Web.config.ConnectionStrings.xml" />
+    <Content Include="ASSETS\Web.config.ConnectionStrings.xml" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -280,7 +280,7 @@
     <Content Include="Views\Vehicle\Index.cshtml" />
     <Content Include="Views\Vehicles\Index.cshtml" />
     <Content Include="Views\Vehicles\Details.cshtml" />
-    <Content Include="Web.config.original" />
+    <Content Include="ASSETS\Web.config.original" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
