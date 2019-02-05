@@ -63,8 +63,9 @@ namespace VehicleFinder.Migrations
 			Sql("INSERT INTO Vehicles(VehicleMake, VehicleModel, VehicleYear, ImageUrl) VALUES ( 'Plymouth', 'Volare', 1976, 'http://www.collectorcarads.com/Picture1/DSCN0216.jpg')");
 			Sql("INSERT INTO Vehicles(VehicleMake, VehicleModel, VehicleYear, ImageUrl) VALUES ( 'Honda', 'Civic', 1976, 'https://i.pinimg.com/736x/36/11/f7/3611f7889e977e791b15633af1cf6823.jpg')");
 			Sql("INSERT INTO Vehicles(VehicleMake, VehicleModel, VehicleYear, ImageUrl) VALUES ( 'Honda', 'Civic', 2012, 'https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fst.motortrend.com%2Fuploads%2Fsites%2F10%2F2015%2F09%2F2012-honda-civic-EX-side.jpg&f=1')");
+			Sql("INSERT INTO Vehicles(VehicleMake, VehicleModel, VehicleYear, ImageUrl) VALUES ( 'Honda', 'Civic 3-Door', 1976, 'https://goo.gl/kYA9xS')");
 
-
+		
 
 			// Run this on the SQL server that contains your existing data. You will recieve a bunch of "INSERT INTO..." lines that 
 			//    you can run via code  (through the Update-Database, in the Up() method) which will populate your new database with mock data
