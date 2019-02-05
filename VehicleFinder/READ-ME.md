@@ -1,4 +1,4 @@
-﻿# Markdown file
+﻿# Read Me
 ---
 
 
@@ -49,4 +49,23 @@ AFTER
           </CipherData>
         </EncryptedData>
       </connectionStrings>
+
+
+
+
+
+
+# Environment setup
+
+
+Some Docker commands for setting envronment and doing regression testing
+Will start the SQL server
+
+     docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=BlaPassword123' -p 1433:1433 --name sql1 -d 314
+     66eb85773219e5a371cb1be807ac73eca86b9a08c66c72a3b551a95dcf6e96d9
+
+To stop the container and remove it so you can regress 
+    
+    docker stop 66e
+    docker rm 66e
 
